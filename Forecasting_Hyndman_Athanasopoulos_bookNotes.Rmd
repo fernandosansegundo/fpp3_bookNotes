@@ -1,0 +1,1722 @@
+---
+title: 'Forecasting Principles and Practice, 3rd Ed. by Hyndman & Athanasopoulos.'
+author: "Booknotes by Fernando San Segundo."
+date: 'Last updated: `r format(Sys.time(), "%Y-%m-%d")`'
+output:
+  pdf_document:
+    includes:
+      in_header: mystyles.sty
+    toc: yes
+    toc_depth: '2'
+  html_document:
+    self_contained: no
+    toc: yes
+    toc_depth: 3
+    toc_float: no
+bibliography: '`r  path.expand(paste0(Sys.getenv("HOME"),"/Dropbox/bib/FernandoSanSegundo.bib"))`'
+---
+
+
+```{r setup, echo=FALSE, warning=FALSE, results='hide'}
+library(knitr)
+library(reticulate)
+library(readr)
+
+knitr::opts_chunk$set(cache = TRUE, cache.lazy = FALSE)
+
+## OS detection
+OSystem = R.version$platform
+
+(Mac = grepl("apple", OSystem))
+(Windows = grepl("w64|w32", OSystem))
+(Linux = grepl("linux", OSystem))
+
+# py_discover_config()
+
+
+if(Linux) use_python("~/venvs/py3/bin/python3", required = TRUE)
+if(Windows){
+  homedir = paste0("C:/Users/", Sys.getenv("USERNAME"), "/")
+  # use_python(paste0(homedir, "Anaconda3/python.exe"), required=T)
+    venvDir = paste0(homedir, "venvs/scp")
+    use_virtualenv(venvDir, required = TRUE)
+
+  }
+if(Mac){
+  homedir = paste0("/Users/", Sys.getenv("USER"), "/")
+  venvDir = normalizePath("~/venvs/py3")
+  use_virtualenv(venvDir, required = TRUE)
+}
+
+
+# if(Windows){
+#   source(paste0(homedir,"Dropbox/local/dropbox_project_sync_off.R"))
+#   dropbox_project_sync_off()
+# } 
+
+```
+
+```{r echo=FALSE}
+usePython = FALSE
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+```
+
+
+```{r, echo=FALSE, eval=usePython}
+matplotlib = import("matplotlib", convert = TRUE)
+matplotlib$use("Agg")
+```
+
+```{python, echo=FALSE, eval=usePython}
+## Python setup
+
+import sys
+# sys.path.append('../statsintro_python/ISP/Listings/')
+import os
+# os.environ['QT_QPA_PLATFORM_PLUGIN_PATH']='c:/Users/ferna/Anaconda3/Library/plugins/platforms'
+```
+
+# Preliminaries and Book Information.
+
+## Software requirements
+
+```{r message=FALSE}
+library(tidyverse)
+```
+
+```{r}
+if(!require(fpp3))install.packages("fpp3")
+```
+
+
+## Useful links
+
+[Continue reading at]() 
+
+[Text of the book](https://otexts.com/fpp3/)
+
+
+
+
+# Chapter 1, Getting started
+
+## 1.1 What can be forecast?
+
+The predictability of an event or a quantity depends on several factors including:
+
+1. how well we understand the factors that contribute to it;
+2. how much data is available;
+3. how similar the future is to the past;
+4. whether the forecasts can affect the thing we are trying to forecast.
+
+## 1.2 Forecasting, goals and planning
+
++ **Forecasting** is about predicting the future as accurately as possible, given all of the information available, including historical data and knowledge of any future events that might impact the forecasts.
++ **Goals** are what you would like to have happen. Goals should be linked to forecasts and plans, but this does not always occur. Too often, goals are set without any plan for how to achieve them, and no forecasts for whether they are realistic.
++ **Planning** is a response to forecasts and goals. Planning involves determining the appropriate actions that are required to make your forecasts match your goals.
+
+## 1.3 Determining what to forecast
+
+## 1.4 Forecasting data and methods
+
+**Quantitative forecasting** can be applied when two conditions are satisfied:
+
+1. numerical information about the past is available;
+2. it is reasonable to assume that some aspects of the past patterns will continue into the future.
+
+Most quantitative prediction problems use either time series data (collected at regular intervals over time) or cross-sectional data (collected at a single point in time). *In this book we are concerned with forecasting future data, and we concentrate on the time series domain.*
+
+### Time series forecasting
+
+In this book, we will only consider time series that are observed at **regular intervals of time** (e.g., hourly, daily, weekly, monthly, quarterly, annually). Irregularly spaced time series can also occur, but are beyond the scope of this book.
+
+The simplest time series forecasting methods use only information on the variable to be forecast, and make no attempt to discover the factors that affect its behaviour. Therefore they will extrapolate trend and seasonal patterns.
+
+Decomposition methods are helpful for studying the trend and seasonal patterns in a time series; these are discussed in Chapter 3. Popular time series models used for forecasting include exponential smoothing models and ARIMA models, discussed in Chapters 8 and 9 respectively.
+
+### Predictor variables and time series forecasting
+
+A model with predictor variables might be of the form
+\begin{align*}
+  \text{ED} = & f(\text{current temperature, strength of economy, population,}\\
+ &  \qquad\text{time of day, day of week, error}).
+\end{align*}
+A suitable time series forecasting model is of the form
+$$\text{ED}_{t+1} = f(\text{ED}_{t}, \text{ED}_{t-1}, \text{ED}_{t-2}, \text{ED}_{t-3},\dots, \text{error})$$
+There is also a third type of model which combines the features of the above two models. For example, it might be given by
+$$\text{ED}_{t+1} = f(\text{ED}_{t}, \text{current temperature, time of day, day of week, error}).$$
+These types of “mixed models” have been given various names in different disciplines. They are known as dynamic regression models, panel data models, longitudinal models, transfer function models.
+
+There are several reasons a forecaster might select a time series model rather than an explanatory or mixed model. in particular, it is necessary to know or forecast the future values of the various predictors in order to be able to forecast the variable of interest, and this may be too difficult. 
+
+## 1.5 Some case studies
+
+## 1.6 The basic steps in a forecasting task
+
++ Step 1: Problem definition. Often the most difficult part of forecasting. 
++ Step 2: Gathering information. Data and expert knowñedge are required.
++ Step 3: Preliminary (exploratory) analysis. 
++ Step 4: Choosing and fitting models. Each model is itself an artificial construct that is based on a set of assumptions (explicit and implicit) and usually involves one or more parameters which must be estimated using the known historical data. We will discuss regression models (Chapter 7), exponential smoothing methods (Chapter 8), Box-Jenkins ARIMA models (Chapter 9), Dynamic regression models (Chapter 10), Hierarchical forecasting (Chapter 11), and several advanced methods including neural networks and vector autoregression (Chapter 12).
++ Step 5: Using and evaluating a forecasting model.
+
+## 1.7 The statistical forecasting perspective
+
+In most forecasting situations, the variation associated with the thing we are forecasting will shrink as the event approaches. In other words, the further ahead we forecast, the more uncertain we are.
+
+When we obtain a forecast, we are estimating the middle of the range of possible values the random variable could take. Often, a forecast is accompanied by a prediction interval giving a range of values the random variable could take with relatively high probability.
+
+We will use the subscript $t$ for time. Thus, $y_t$ will denote the observation at time $t$. The symbol $y_{t} | \mathcal{I}$ means “the random variable $y_{t}$ given the information $\cal I$ that what we know. The set of values that this random variable could take, along with their relative probabilities, is known as the “forecasting distribution of $y_{t} | \mathcal{I}$. The *"forecast"* usually means mean the (estimated?) average value of the forecast distribution, denoted by $\hat y_{t}$. Also we will  write, for example, $\hat{y}_{t|t-1}$ to mean the forecast of $y_t$ taking account of all previous observations $(y_1,\dots,y_{t-1})$.
+
+
+# Chapter 2 Time series graphics
+
+## 2.1 tsibble objec
+
+### The index variablets
+
+```{r}
+library(fpp3)
+(y <- tsibble(
+  Year = 2015:2019,
+  Observation = c(123, 39, 78, 52, 110),
+  index = Year
+))
+```
+
+Sometimes we need to use a time class function on the index. 
+```{r}
+(z = tribble(
+  ~Month, ~Observation,
+"2019 Jan", 50,
+"2019 Feb", 23,
+"2019 Mar", 34,
+"2019 Apr", 30,
+"2019 May", 25
+))
+```
+```{r}
+Sys.getlocale()
+Sys.setlocale(category = "LC_ALL", locale = "en_US.UTF-8")
+z %>%
+  mutate(Month = yearmonth(Month)) %>%
+  as_tsibble(index = Month)
+```
+
+Other time class functions can be used:
+
+Frequency |  Function
+ ---------|------------ 
+Annual  | 	start:end
+Quarterly	 | yearquarter()
+Monthly	 | yearmonth()
+Weekly  | 	yearweek()
+Daily	 | as_date(), ymd()
+Sub-daily	 | as_datetime(), ymd_hms()
+
+### The key variables
+
+```{r}
+olympic_running
+
+olympic_running %>% distinct(Length)
+
+```
+
+### Working with tsibble objects
+
+```{r}
+PBS
+```
+```{r}
+PBS %>%
+  filter(ATC2 == "A10") 
+```
+
+```{r}
+PBS %>%
+  filter(ATC2 == "A10") %>%
+  select(Month, Concession, Type, Cost)
+```
+
+```{r}
+PBS %>%
+  filter(ATC2 == "A10") %>%
+  select(Month, Concession, Type, Cost) %>%
+  summarise(TotalC = sum(Cost))
+```
+
+```{r}
+PBS %>%
+  filter(ATC2 == "A10") %>%
+  select(Month, Concession, Type, Cost) %>%
+  summarise(TotalC = sum(Cost)) %>%
+  mutate(Cost = TotalC/1e6)
+```
+
+```{r}
+a10 = PBS %>%
+  filter(ATC2 == "A10") %>%
+  select(Month, Concession, Type, Cost) %>%
+  summarise(TotalC = sum(Cost)) %>%
+  mutate(Cost = TotalC / 1e6)
+```
+
+
+### Read a csv file and convert to a tsibble
+
+```{r}
+if(!file.exists("../data/prison_population.csv")){
+  prison <- readr::read_csv("https://OTexts.com/fpp3/extrafiles/prison_population.csv")
+  write_csv(prison, file = "../data/prison_population.csv")
+} else {
+  prison = readr::read_csv("../data/prison_population.csv")
+}
+
+prison
+```
+
+```{r}
+prison <- prison %>%
+  mutate(Quarter = yearquarter(Date)) %>%
+  select(-Date) %>%
+  as_tsibble(key = c(State, Gender, Legal, Indigenous),
+             index = Quarter)
+
+prison
+
+```
+
+### The seasonal period
+
+The seasonal period is the number of observations before the seasonal pattern repeats. In most cases, this will be automatically detected using the time index variable.
+
+Year > Quarters > Months > Weeks	> Days > Hours  > Minutes > Seconds
+
+
+## 2.2 Time plots
+
+
+```{r}
+melsyd_economy <- ansett %>%
+  filter(Airports == "MEL-SYD", Class == "Economy") %>%
+    mutate(Passengers = Passengers/1000)
+
+autoplot(melsyd_economy, Passengers) +
+    labs(title = "Ansett airlines economy class",
+       subtitle = "Melbourne-Sydney",
+       y = "Passengers ('000)")
+```
+The autoplot() command  automatically produces an appropriate plot of whatever you pass to it in the first argument. In this case, it recognises melsyd_economy as a time series and produces a time plot.
+
+
+```{r}
+autoplot(a10, Cost) +
+  labs(y = "$ (millions)",
+       title = "Australian antidiabetic drug sales")
+```
+
+## 2.3 Time series patterns
+
++ Trend. A trend exists when there is a long-term increase or decrease in the data. It does not have to be linear. Sometimes we will refer to a trend as “changing direction”.
++ Seasonal. A seasonal pattern occurs when a time series is affected by seasonal factors such as the time of the year or the day of the week. Seasonality is always of a fixed and known period. 
++ Cyclic. A cycle occurs when the data exhibit rises and falls that are not of a fixed frequency. These fluctuations are usually due to economic conditions, and are often related to the “business cycle.” The duration of these fluctuations is usually at least 2 years. In general, the average length of cycles is longer than the length of a seasonal pattern, and the magnitudes of cycles tend to be more variable than the magnitudes of seasonal patterns.
+
+## 2.4 Seasonal plots
+
+Is similar to a time plot except that the data are plotted against the individual “seasons” in which the data were observed. 
+
+```{r}
+a10 %>%
+  gg_season(Cost, labels = "both") +
+  labs(y = "$ (millions)",
+       title = "Seasonal plot: Antidiabetic drug sales") +
+  expand_limits(x = ymd(c("1972-12-28", "1973-12-04")))
+```
+### Multiple seasonal periods
+
+```{r}
+vic_elec
+```
+
+
+```{r}
+vic_elec %>% gg_season(Demand, period = "day") +
+  theme(legend.position = "none") +
+  labs(y="MW", title="Electricity demand: Victoria")
+```
+
+```{r}
+vic_elec %>% gg_season(Demand, period = "week") +
+  theme(legend.position = "none") +
+  labs(y="MW", title="Electricity demand: Victoria")
+```
+```{r}
+vic_elec %>% gg_season(Demand, period = "year") +
+  labs(y="MW", title="Electricity demand: Victoria")
+```
+
+## 2.5 Seasonal subseries plots
+
+
+```{r}
+a10 %>%
+  gg_subseries(Cost) +
+  labs(
+    y = "$ (millions)",
+    title = "Australian antidiabetic drug sales"
+  )
+```
+
+### Example: Australian holiday tourism
+
+
+```{r}
+(holidays <- tourism %>%
+  filter(Purpose == "Holiday") %>%
+  group_by(State) %>%
+  summarise(Trips = sum(Trips)))
+```
+```{r}
+autoplot(holidays, Trips) +
+  labs(y = "Overnight trips ('000)",
+       title = "Australian domestic holidays")
+```
+
+```{r}
+autoplot(holidays) +
+  labs(y = "Overnight trips ('000)",
+       title = "Australian domestic holidays")
+
+```
+
+
+```{r}
+gg_season(holidays, Trips) +
+  labs(y = "Overnight trips ('000)",
+       title = "Australian domestic holidays")
+```
+```{r fig.height=9}
+holidays %>%
+  gg_subseries(Trips) +
+  labs(y = "Overnight trips ('000)",
+       title = "Australian domestic holidays")
+```
+
+
+```{r}
+aus_production %>% 
+  select(Beer) %>% 
+  gg_subseries()
+```
+
+
+
+## 2.6 Scatterplots
+
+These are useful to explore relationships *between* time series.
+
+```{r}
+vic_elec %>%
+  filter(year(Time) == 2014) %>%
+  autoplot(Demand) +
+  labs(y = "GW",
+       title = "Half-hourly electricity demand: Victoria") -> p1 
+
+p2 = vic_elec %>%
+  filter(year(Time) == 2014) %>%
+  autoplot(Temperature) +
+  labs(
+    y = "Degrees Celsius",
+    title = "Half-hourly temperatures: Melbourne, Australia"
+  )
+
+gridExtra::grid.arrange(p1, p2, nrow = 2)
+```
+```{r}
+vic_elec %>%
+  filter(year(Time) == 2014) %>%
+  ggplot(aes(x = Temperature, y = Demand)) +
+  geom_point() +
+  labs(x = "Temperature (degrees Celsius)",
+       y = "Electricity demand (GW)")
+```
+
+### Correlation
+
+### Scatterplot matrices
+
+```{r}
+visitors <- tourism %>%
+  group_by(State) %>%
+  summarise(Trips = sum(Trips))
+visitors %>%
+  ggplot(aes(x = Quarter, y = Trips)) +
+  geom_line() +
+  facet_grid(vars(State), scales = "free_y") +
+  labs(title = "Australian domestic tourism",
+       y= "Overnight trips ('000)")
+```
+```{r}
+visitors %>%
+  pivot_wider(values_from=Trips, names_from=State) %>%
+  GGally::ggpairs(columns = 2:9, progress =FALSE)
+```
+
+## 2.7 Lag plots
+
+
+```{r}
+recent_production <- aus_production %>%
+  filter(year(Quarter) >= 2000)
+recent_production %>%
+  gg_lag(Beer, geom = "point", lags = 1:12) +
+  labs(x = "lag(Beer, k)")
+```
+
+## 2.8 Autocorrelation
+
+```{r}
+recent_production %>% 
+  ACF(Beer, lag_max = 9) %>% 
+  arrange(desc(acf))
+```
+
+Correlogram
+
+```{r}
+recent_production %>%
+  ACF(Beer, lag_max = 9) %>%
+  autoplot() + labs(title="Australian beer production")
+```
+
+## Trend and seasonality in ACF plots
+
+```{r}
+a10 %>%
+  ACF(Cost, lag_max = 48) %>%
+  autoplot() +
+  labs(title="Australian antidiabetic drug sales")
+```
+
+## 2.9 White noise
+
+Time series that show no autocorrelation are called white noise
+
+```{r}
+set.seed(30)
+y <- tsibble(sample = 1:50, wn = rnorm(50), index = sample)
+y %>% autoplot(wn) + labs(title = "White noise", y = "")
+```
+
+```{r}
+y %>%
+  ACF(wn) %>%
+  autoplot() + labs(title = "White noise")
+```
+
+# Chapter 3 Time series decomposition
+
+When we decompose a time series into components, we usually combine the trend and cycle into a single trend-cycle component. Thus we can think of a time series as comprising three components: a trend-cycle component, a seasonal component, and a remainder component (containing anything else in the time series).  
+
+
+## 3.1 Transformations and adjustments
+
+### Calendar adjustments
+
+### Population adjustments
+
+```{r}
+
+meanPop = mean(global_economy$Population, na.rm = TRUE)
+
+p1 = global_economy %>%
+  filter(Country == "Australia") %>%
+  autoplot(GDP/Population) +
+  geom_line(aes(y= GDP / meanPop), color = "#D55E00")
+  labs(title= "GDP per capita", y = "$US")
+
+p2 = global_economy %>%
+  filter(Country == "Australia") %>%
+  autoplot(GDP / meanPop) +
+  labs(title= "GDP", y = "$US")
+
+p3 = global_economy %>%
+  filter(Country == "Australia") %>%
+  autoplot(Population) +
+  labs(title= "Population", y = "$US")
+
+gridExtra::grid.arrange(p1, p3, p2, nrow = 2)
+```
+
+### Inflation adjustments
+
+```{r}
+print_retail <- aus_retail %>%
+  filter(Industry == "Newspaper and book retailing") %>%
+  group_by(Industry) %>%
+  index_by(Year = year(Month)) %>%
+  summarise(Turnover = sum(Turnover))
+aus_economy <- global_economy %>%
+  filter(Code == "AUS")
+print_retail %>%
+  left_join(aus_economy, by = "Year") %>%
+  mutate(Adjusted_turnover = Turnover / CPI * 100) %>%
+  pivot_longer(c(Turnover, Adjusted_turnover),
+               values_to = "Turnover") %>%
+  mutate(name = factor(name,
+         levels=c("Turnover","Adjusted_turnover"))) %>%
+  ggplot(aes(x = Year, y = Turnover)) +
+  geom_line() +
+  facet_grid(name ~ ., scales = "free_y") +
+  labs(title = "Turnover: Australian print media industry",
+       y = "$AU")
+```
+
+
+### Mathematical transformations
+
+```{r}
+p1 = aus_production %>%
+  autoplot(Gas) +
+  labs(y = "", title = "Gas production")
+lambda <- aus_production %>%
+  features(Gas, features = guerrero) %>%
+  pull(lambda_guerrero)
+p2 = aus_production %>%
+  autoplot(box_cox(Gas, lambda)) +
+  labs(y = "",
+       title = latex2exp::TeX(paste0(
+         "Transformed gas production with $\\lambda$ = ",
+         round(lambda,2))))
+gridExtra::grid.arrange(p1, p2, nrow = 2)
+
+```
+
+## 3.2 Time series components
+
+If we assume an additive decomposition, then we can write
+$$y_{t} = S_{t} + T_{t} + R_t,$$
+where $y_{t}$ is the data $S_{t}$ is the seasonal component,  $T_{t}$ is the trend and $R_t$ is the remainder.
+
+Alternatively, a multiplicative decomposition would be written as
+$$y_{t} = S_{t} \times T_{t} \times R_t.$$
+When the variation in the seasonal pattern, or the variation around the trend-cycle, appears to be proportional to the level of the time series, then a multiplicative decomposition is more appropriate. But with a log-like transformation, multiplicative becomes additive.
+
+### Employment in the US retail sector
+
+```{r}
+us_retail_employment <- us_employment %>%
+  filter(year(Month) >= 1990, Title == "Retail Trade") %>%
+  select(-Series_ID)
+autoplot(us_retail_employment, Employed) +
+  labs(y = "Persons (thousands)",
+       title = "Total employment in US retail")
+```
+
+```{r}
+dcmp <- us_retail_employment %>%
+  model(stl = STL(Employed))
+components(dcmp)
+```
+This output forms a “dable” or decomposition table. The header to the table shows that the Employed series has been decomposed additively.
+
+```{r}
+components(dcmp) %>%
+  as_tsibble() %>%
+  autoplot(Employed, color="gray") +
+  geom_line(aes(y=trend), color = "#D55E00") +
+  labs(
+    y = "Persons (thousands)",
+    title = "Total employment in US retail"
+  )
+```
+
+We can plot all of the components in a single figure using autoplot()
+
+```{r}
+components(dcmp) %>% autoplot()
+```
+
+## Seasonally adjusted data
+
+```{r}
+components(dcmp) %>%
+  as_tsibble() %>%
+  autoplot(Employed, color = "gray") +
+  geom_line(aes(y=season_adjust), color = "#0072B2") +
+  labs(y = "Persons (thousands)",
+       title = "Total employment in US retail")
+```
+
+## 3.3 Moving averages
+
+
+### Moving average smoothing
+
+A moving average of order $m$ can be written as
+\begin{equation}
+  \hat{T}_{t} = \frac{1}{m} \sum_{j=-k}^k y_{t+j}, \tag{3.2}
+\end{equation}
+
+```{r}
+global_economy %>%
+  filter(Country == "Australia") %>%
+  autoplot(Exports) +
+  labs(y = "% of GDP", title = "Total Australian exports")
+```
+
+```{r}
+aus_exports <- global_economy %>%
+  filter(Country == "Australia") %>%
+  mutate(
+    `5-MA` = slider::slide_dbl(Exports, mean,
+                .before = 2, .after = 2, .complete = TRUE)
+  )
+
+aus_exports %>% select(Year, Exports, `5-MA`) %>% head(20) %>% kable()
+```
+
+```{r}
+aus_exports %>%
+  autoplot(Exports) +
+  geom_line(aes(y = `5-MA`), color = "#D55E00") +
+  guides(colour = guide_legend(title = "series"), size = guide_legend("title")) + 
+  labs(y = "% of GDP",
+       title = "Total Australian exports") 
+  
+```
+
+### Moving averages of moving averages
+
+```{r}
+beer <- aus_production %>%
+  filter(year(Quarter) >= 1992) %>%
+  select(Quarter, Beer)
+beer_ma <- beer %>%
+  mutate(
+    `4-MA` = slider::slide_dbl(Beer, mean,
+                .before = 1, .after = 2, .complete = TRUE),
+    `2x4-MA` = slider::slide_dbl(`4-MA`, mean,
+                .before = 1, .after = 0, .complete = TRUE)
+  )
+```
+
+
+### Estimating the trend-cycle with seasonal data
+
+
+In general, a  $2\times m$-MA is equivalent to a weighted moving average of order $m+1$ where all observations take the weight $1/m$, except for the first and last terms which take weights $1/(2m)$. So, if the seasonal period is even and of order $m$, we use a  $2×m$-MA to estimate the trend-cycle. If the seasonal period is odd and of order  
+$m$, we use a $m$-MA to estimate the trend-cycle. For example, a $2×12$-MA can be used to estimate the trend-cycle of monthly data with annual seasonality and a $7$-MA can be used to estimate the trend-cycle of daily data with a weekly seasonality.
+
+### Example: Employment in the US retail sector
+
+```{r}
+us_retail_employment_ma <- us_retail_employment %>%
+  mutate(
+    `12-MA` = slider::slide_dbl(Employed, mean,
+                .before = 5, .after = 6, .complete = TRUE),
+    `2x12-MA` = slider::slide_dbl(`12-MA`, mean,
+                .before = 1, .after = 0, .complete = TRUE)
+  )
+us_retail_employment_ma %>%
+  autoplot(Employed, color = "gray") +
+  geom_line(aes(y = `2x12-MA`), color = "#D55E00") +
+  labs(y = "Persons (thousands)",
+       title = "Total employment in US retail")
+```
+
+
+### Weighted moving averages
+
+Combinations of moving averages result in weighted moving averages. In general, a weighted $m$-MA can be written as
+$$\hat{T}_t = \sum_{j=-k}^k a_j y_{t+j},$$
+where $k = (m - 1)/2$
+It is important that the weights all sum to one and that they are symmetric so that $a_j = a_{-j}$.
+
+## 3.4 Classical decomposition
+
+Let us consider that a time series has seasonal period $m$. In classical decomposition, we assume that the seasonal component is constant from year to year. 
+
+### Additive decomposition
+
++ Step 1: If $m$ is odd, compute the trend-cycle component $\hat T_t$ with a $m$-MA. If $m$ is even, compute the trend-cycle component $\hat T_t$ with a $2\times m$-MA.
+
++ Step 2: Compute the *detrended* series $y_t - \hat{T}_t$
+
++ Step 3: To estimate the seasonal component for each season, simply average the detrended values for that season. These seasonal component values are then adjusted to ensure that they add to zero. The *seasonal component* is obtained by stringing together these monthly values, and then replicating the sequence for each year of data. This give
+$\hat S_t$
+
++ Step 4: The remainder component is calculated by subtracting the estimated seasonal and trend-cycle components $\hat{R}_t = y_t - \hat{T}_t - \hat{S}_t$  
+
+```{r}
+us_retail_employment %>%
+  model(
+    classical_decomposition(Employed, type = "additive")
+  ) %>%
+  components() %>%
+  autoplot() +
+  labs(title = "Classical additive decomposition of total
+                  US retail employment")
+```
+
+
+### Multiplicative decomposition
+
+A classical multiplicative decomposition is similar, except that the subtractions are replaced by divisions.
+
++ Step 1: If $m$ is odd, compute the trend-cycle component $\hat T_t$ with a $m$-MA. If $m$ is even, compute the trend-cycle component $\hat T_t$ with a $2\times m$-MA.
+
++ Step 2: Compute the *detrended* series $y_t /\hat{T}_t$
+
++ Step 3: To estimate the seasonal component for each season, simply average the detrended values for that season. These seasonal component values are then adjusted to ensure that they add to $m$. The *seasonal component* is obtained by stringing together these monthly values, and then replicating the sequence for each year of data. This give
+$\hat S_t$
+
++ Step 4: The remainder component is calculated by dividing out the estimated seasonal and trend-cycle components $\hat{R}_t = y_t /( \hat{T}_t \hat{S}_t)$.  
+
+### Comments on classical decomposition
+
+While classical decomposition is still widely used, it is not recommended, because of these problems (among others):
+
++ The estimate of the trend-cycle is unavailable for the first few and last few observations. 
++ The trend-cycle estimate tends to over-smooth rapid rises and falls in the data.
++ Classical decomposition methods assume that the seasonal component repeats from year to year. For many series, this is a reasonable assumption, but for some longer series it is not.
++ Occasionally, the values of the time series in a small number of periods may be particularly unusual. The classical method is not robust to these kinds of unusual values.
+
+## 3.5 Methods used by official statistics agencies
+
+### X-11 method
+
+```{r}
+x11_dcmp <- us_retail_employment %>%
+  model(x11 = X_13ARIMA_SEATS(Employed ~ x11())) %>%
+  components()
+autoplot(x11_dcmp) +
+  labs(title =
+    "Additive decomposition of US retail employment using X-11.")
+```
+
+```{r}
+x11_dcmp %>%
+  ggplot(aes(x = Month)) +
+  geom_line(aes(y = Employed, colour = "Data")) +
+  geom_line(aes(y = season_adjust,
+                colour = "Seasonally Adjusted")) +
+  geom_line(aes(y = trend, colour = "Trend")) +
+  labs(y = "Persons (thousands)",
+       title = "Total employment in US retail") +
+  scale_colour_manual(
+    values = c("gray", "#0072B2", "#D55E00"),
+    breaks = c("Data", "Seasonally Adjusted", "Trend")
+  )
+```
+
+```{r}
+x11_dcmp %>%
+  gg_subseries(seasonal)
+```
+
+### SEATS method
+
+This procedure was developed at the Bank of Spain, and is now widely used by government agencies around the world.
+
+```{r}
+seats_dcmp <- us_retail_employment %>%
+  model(seats = X_13ARIMA_SEATS(Employed ~ seats())) %>%
+  components()
+autoplot(seats_dcmp) +
+  labs(title =
+    "Decomposition of total US retail employment using SEATS")
+```
+
+## 3.6 STL decomposition
+
+STL is a versatile and robust method for decomposing time series. STL is an acronym for “Seasonal and Trend decomposition using Loess.
+
+STL has several advantages over classical decomposition, and the SEATS and X-11 methods:
+
++ Unlike SEATS and X-11, STL will handle any type of seasonality, not only monthly and quarterly data.
++ The seasonal component is allowed to change over time, and the rate of change can be controlled by the user.
++ The smoothness of the trend-cycle can also be controlled by the user.
++ It can be robust to outliers (i.e., the user can specify a robust decomposition), so that occasional unusual observations will not affect the estimates of the trend-cycle and seasonal components. They will, however, affect the remainder component.
+
+STL has some disadvantages. In particular, it does not handle trading day or calendar variation automatically, and it only provides facilities for additive decompositions.
+
+```{r}
+us_retail_employment %>%
+  model(
+    STL(Employed ~ trend(window = 7) +
+                   season(window = "periodic"),
+    robust = TRUE)) %>%
+  components() %>%
+  autoplot()
+```
+
+The two main parameters to be chosen when using STL are the trend-cycle window trend(window = ?) and the seasonal window season(window = ?).  Both trend and seasonal windows should be odd numbers; trend window is the number of consecutive observations to be used when estimating the trend-cycle; season window is the number of consecutive years to be used in estimating each value in the seasonal component. 
+
+Setting the seasonal window to be infinite is equivalent to forcing the seasonal component to be periodic season(window='periodic') (i.e., identical across years). 
+
+
+# Chapter 4 Time series features
+
+The feasts package includes functions for computing FEatures And Statistics from Time Series (hence the name).
+
+## 4.1 Some simple statistics
+
+```{r}
+tourism %>%
+  features(Trips, list(mean = mean)) %>%
+  arrange(mean)
+```
+
+```{r}
+tourism %>% features(Trips, quantile)
+```
+## 4.2 ACF features
+
+The feat_acf() function computes a selection of the autocorrelations discussed here. It will return six or seven features:
+
+1. the first autocorrelation coefficient from the original data;
+1. the sum of squares of the first ten autocorrelation coefficients from the original data;
+1. the first autocorrelation coefficient from the differenced data;
+1. the sum of squares of the first ten autocorrelation coefficients from the differenced data;
+1. the first autocorrelation coefficient from the twice differenced data;
+1. the sum of squares of the first ten autocorrelation coefficients from the twice differenced data;
+1. For seasonal data, the autocorrelation coefficient at the first seasonal lag is also returned.
+
+```{r}
+tourism %>% features(Trips, feat_acf)
+```
+
+## 4.3 STL Features
+
+
+A time series decomposition can be used to measure the strength of trend and seasonality in a time series. Recall that the decomposition is written as
+$$y_t = T_t + S_{t} + R_t,$$
+For strongly trended data, the seasonally adjusted data should have much more variation than the remainder component. To measure this we consider
+$$
+F_T = \max\left(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(T_t+R_t)}\right).
+$$
+This will give a measure of the strength of the trend between 0 (no trend) and 1 (strong trend). 
+
+
+The strength of seasonality is defined similarly, but with respect to the detrended data rather than the seasonally adjusted data:
+$$
+F_S = \max\left(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(S_{t}+R_t)}\right).
+$$
+A series with seasonal strength  $F_S$ close to 0 exhibits almost no seasonality, while a series with strong seasonality will have $F_S$ close to 1.
+```{r}
+tourism %>%
+  features(Trips, feat_stl)
+```
+ 
+```{r}
+tourism %>%
+  features(Trips, feat_stl) %>%
+  ggplot(aes(x = trend_strength, y = seasonal_strength_year,
+             col = Purpose)) +
+  geom_point() +
+  facet_wrap(vars(State))
+```
+
+```{r}
+tourism %>%
+  features(Trips, feat_stl) %>%
+  filter(
+    seasonal_strength_year == max(seasonal_strength_year)
+  ) %>%
+  left_join(tourism, by = c("State", "Region", "Purpose")) %>%
+  ggplot(aes(x = Quarter, y = Trips)) +
+  geom_line() +
+  facet_grid(vars(State, Region, Purpose))
+```
+This shows holiday trips to the most popular ski region of Australia.
+
+The feat_stl() function returns several more features other than those discussed above.
+
++ seasonal_peak_year indicates the timing of the peaks — which month or quarter contains the largest seasonal component. This tells us something about the nature of the seasonality. 
++ seasonal_trough_year indicates the timing of the troughs — which month or quarter contains the smallest seasonal component.
++ spikiness measures the prevalence of spikes in the remainder component of the STL decomposition. It is the variance of its leave-one-out variances.
++ linearity measures the linearity of the trend component of the STL decomposition. It is based on the coefficient of a linear regression applied to the trend component.
++ curvature measures the curvature of the trend component of the STL decomposition. It is based on the coefficient from an orthogonal quadratic regression applied to the trend component.
++ stl_e_acf1 is the first autocorrelation coefficient of the remainder series.
++ stl_e_acf10 is the sum of squares of the first ten autocorrelation coefficients of the remainder series.
+
+## 4.4 Other features
+
+## 4.5 Exploring Australian tourism data
+
+```{r}
+tourism_features <- tourism %>%
+  features(Trips, feature_set(pkgs = "feasts"))
+tourism_features
+
+```
+```{r}
+library(glue)
+tourism_features %>%
+  select_at(vars(contains("season"), Purpose)) %>%
+  mutate(
+    seasonal_peak_year = seasonal_peak_year +
+      4*(seasonal_peak_year==0),
+    seasonal_trough_year = seasonal_trough_year +
+      4*(seasonal_trough_year==0),
+    seasonal_peak_year = glue("Q{seasonal_peak_year}"),
+    seasonal_trough_year = glue("Q{seasonal_trough_year}"),
+  ) %>%
+  GGally::ggpairs(mapping = aes(colour = Purpose), progress=FALSE)
+```
+
+```{r}
+library(broom)
+pcs <- tourism_features %>%
+  select(-State, -Region, -Purpose) %>%
+  prcomp(scale = TRUE) %>%
+  augment(tourism_features)
+pcs %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = Purpose)) +
+  geom_point() +
+  theme(aspect.ratio = 1)
+```
+
+```{r}
+outliers <- pcs %>%
+  filter(.fittedPC1 > 10) %>%
+  select(Region, State, Purpose, .fittedPC1, .fittedPC2)
+outliers
+
+```
+
+```{r}
+outliers %>%
+  left_join(tourism, by = c("State", "Region", "Purpose")) %>%
+  mutate(
+    Series = glue("{State}", "{Region}", "{Purpose}",
+                  .sep = "\n\n")
+  ) %>%
+  ggplot(aes(x = Quarter, y = Trips)) +
+  geom_line() +
+  facet_grid(Series ~ ., scales = "free") +
+  labs(title = "Outlying time series in PC space")
+```
+
+# Chapter 5 The forecaster’s toolbox
+
+## 5.1 A tidy forecasting workflow
+
+## 5.2 Some simple forecasting methods
+
+```{r}
+bricks <- aus_production %>%
+  filter_index("1970 Q1" ~ "2004 Q4")
+```
+
+```{r}
+# Re-index based on trading days
+google_stock <- gafa_stock %>%
+  filter(Symbol == "GOOG", year(Date) >= 2015) %>%
+  mutate(day = row_number()) %>%
+  update_tsibble(index = day, regular = TRUE)
+# Filter the year of interest
+google_2015 <- google_stock %>% filter(year(Date) == 2015)
+# Fit the models
+google_fit <- google_2015 %>%
+  model(
+    Mean = MEAN(Close),
+    `Naïve` = NAIVE(Close),
+    Drift = NAIVE(Close ~ drift())
+  )
+# Produce forecasts for the trading days in January 2016
+google_jan_2016 <- google_stock %>%
+  filter(yearmonth(Date) == yearmonth("2016 Jan"))
+google_fc <- google_fit %>%
+  forecast(new_data = google_jan_2016)
+# Plot the forecasts
+google_fc %>%
+  autoplot(google_2015, level = NULL) +
+  autolayer(google_jan_2016, Close, color = "black") +
+  labs(y = "$US",
+       title = "Google daily closing stock prices",
+       subtitle = "(Jan 2015 - Jan 2016)") +
+  guides(colour = guide_legend(title = "Forecast"))
+```
+
+
+
+## 5.4 Residual diagnostics
+
+### Example: Forecasting Google daily closing stock prices
+
+
+```{r}
+autoplot(google_2015, Close) +
+  labs(y = "$US",
+       title = "Google daily closing stock prices in 2015")
+```
+
+```{r}
+aug <- google_2015 %>%
+  model(NAIVE(Close)) %>%
+  augment()
+autoplot(aug, .innov) +
+  labs(y = "$US",
+       title = "Residuals from the Naïve method")
+```
+
+```{r}
+aug %>%
+  ggplot(aes(x = .innov)) +
+  geom_histogram() +
+  labs(title = "Histogram of residuals")
+```
+
+
+```{r}
+aug %>%
+  ACF(.innov) %>%
+  autoplot() +
+  labs(title = "Residuals from the Naïve method")
+```
+
+```{r}
+google_2015 %>%
+  model(NAIVE(Close)) %>%
+  gg_tsresiduals()
+```
+
+### Portmanteau tests for autocorrelation
+
+```{r}
+aug %>% features(.innov, box_pierce, lag = 10, dof = 0)
+```
+
+
+```{r}
+aug %>% features(.innov, ljung_box, lag = 10, dof = 0)
+```
+
+
+```{r}
+fit <- google_2015 %>% model(RW(Close ~ drift()))
+tidy(fit)
+```
+
+```{r}
+augment(fit) %>% features(.innov, ljung_box, lag=10, dof=1)
+
+```
+
+## 5.5 Distributional forecasts and prediction intervals
+
+### Forecast distributions
+
+### Prediction intervals
+
+$$\hat{y}_{T+h|T} \pm c \hat\sigma_h$$
+
+### One-step prediction intervals
+
+\begin{equation}
+  \hat{\sigma} = \sqrt{\frac{1}{T-K}\sum_{t=1}^T e_t^2}, \tag{5.1}
+\end{equation}
+
+
+### Multi-step prediction intervals
+
+### Benchmark methods
+
+
+```{r}
+google_2015 %>%
+  model(NAIVE(Close)) %>%
+  forecast(h = 10) %>%
+  hilo()
+
+```
+
+```{r}
+google_2015 %>%
+  model(NAIVE(Close)) %>%
+  forecast(h = 10) %>%
+  autoplot(google_2015) +
+  labs(title="Google daily closing stock price", y="$US" )
+```
+
+
+
+### Prediction intervals from bootstrapped residuals
+
+```{r}
+fit <- google_2015 %>%
+  model(NAIVE(Close))
+sim <- fit %>% generate(h = 30, times = 5, bootstrap = TRUE)
+sim
+
+```
+```{r}
+google_2015 %>%
+  ggplot(aes(x = day)) +
+  geom_line(aes(y = Close)) +
+  geom_line(aes(y = .sim, colour = as.factor(.rep)),
+    data = sim) +
+  labs(title="Google daily closing stock price", y="$US" ) +
+  guides(col = FALSE)
+```
+
+
+```{r}
+fc <- fit %>% forecast(h = 30, bootstrap = TRUE)
+fc
+```
+
+
+```{r}
+autoplot(fc, google_2015) +
+  labs(title="Google daily closing stock price", y="$US" )
+```
+
+```{r}
+google_2015 %>%
+  model(NAIVE(Close)) %>%
+  forecast(h = 10, bootstrap = TRUE, times = 1000) %>%
+  hilo()
+
+```
+## 5.6 Forecasting using transformations
+
+
+### Prediction intervals with transformations
+
+### Bias adjustments
+
+```{r}
+prices %>%
+  filter(!is.na(eggs)) %>%
+  model(RW(log(eggs) ~ drift())) %>%
+  forecast(h = 50) %>%
+  autoplot(prices %>% filter(!is.na(eggs)),
+    level = 80, point_forecast = lst(mean, median)
+  ) +
+  labs(title = "Annual egg prices",
+       y = "$US (in cents adjusted for inflation) ")
+```
+
+
+## 5.7 Forecasting with decomposition
+
+To forecast a decomposed time series, 
+
+$$y_t = \hat{S}_t + \hat{A}_t,$$
+we forecast the seasonal component $\hat{S}_t$ and the seasonally adjusted component $\hat{A}_t$
+
+It is usually assumed that the seasonal component is unchanging, or changing extremely slowly, so it is forecast by simply taking the last year of the estimated component. In other words, a Seasonal naïve method is used for the seasonal component. To forecast the seasonally adjusted component, any non-seasonal forecasting method may be used.
+
+### Example: Employment in the US retail sector
+
+```{r}
+us_retail_employment <- us_employment %>%
+  filter(year(Month) >= 1990, Title == "Retail Trade")
+dcmp <- us_retail_employment %>%
+  model(STL(Employed ~ trend(window = 7), robust = TRUE)) %>%
+  components() %>%
+  select(-.model)
+dcmp %>%
+  model(NAIVE(season_adjust)) %>%
+  forecast() %>%
+  autoplot(dcmp) +
+  labs(y = "Number of people",
+       title = "US retail employment")
+```
+
+This is made easy with the decomposition_model() function,
+
+```{r}
+fit_dcmp <- us_retail_employment %>%
+  model(stlf = decomposition_model(
+    STL(Employed ~ trend(window = 7), robust = TRUE),
+    NAIVE(season_adjust)
+  ))
+fit_dcmp %>%
+  forecast() %>%
+  autoplot(us_retail_employment)+
+  labs(y = "Number of people",
+       title = "Monthly US retail employment")
+```
+
+```{r}
+fit_dcmp %>% gg_tsresiduals()
+```
+The ACF of the residuals shown in Figure 5.20, display significant autocorrelations. These are due to the Naïve method not capturing the changing trend in the seasonally adjusted series.
+
+## 5.8 Evaluating point forecast accuracy
+
+
+### Training and test sets
+
+It is standard practice to separate the available data into two portions, training and test data, where the training data is used to estimate any parameters of a forecasting method and the test data is used to evaluate its accuracy. The test set should ideally be at least as large as the maximum forecast horizon required. 
+
++ A model which fits the training data well will not necessarily forecast well.
++ A perfect fit can always be obtained by using a model with enough parameters.
++ Overfitting a model to data is just as bad as failing to identify a systematic pattern in the data.
+
+### Functions to subset a time series
+
+```{r}
+(aus_production %>% filter(year(Quarter) >= 1995))
+
+(aus_production %>%
+  slice(n()-19:0))
+
+```
+```{r}
+aus_retail %>%
+  group_by(State, Industry) %>%
+  slice(1:12)
+```
+This will subset the first year (the index is quarter) of data from each time series in the data.
+
+### Forecast errors
+
+$e_{T+h} = y_{T+h} - \hat{y}_{T+h|T},$
+
+### Scale-dependent errors
+
+Accuracy measures that are based only on the $e_{i}$ are therefore scale-dependent and cannot be used to make comparisons between series that involve different units.
+
+
+\begin{align*}
+  \text{Mean absolute error: MAE} & = \text{mean}(|e_{t}|),\\
+  \text{Root mean squared error: RMSE} & = \sqrt{\text{mean}(e_{t}^2)}.
+\end{align*}
+
+### Percentage errors
+
+The percentage error is given by 
+$$p_{t} = 100 e_{t}/y_{t}$$
+and it can be used to define
+$$\text{Mean absolute percentage error: MAPE} = \text{mean}(|p_{t}|).$$
+### Scaled errors
+
+For a non-seasonal time series, a useful way to define a scaled error uses Naïve forecasts:
+$$
+q_{j} = \frac{\displaystyle e_{j}}
+    {\displaystyle\frac{1}{T-1}\sum_{t=2}^T |y_{t}-y_{t-1}|}.
+$$
+Because of the quotient it is independent of the scale of the data.
+
+For seasonal time series, a scaled error can be defined using Seasonal naïve forecasts:
+$$
+q_{j} = \frac{\displaystyle e_{j}}
+    {\displaystyle\frac{1}{T-m}\sum_{t=m+1}^T |y_{t}-y_{t-m}|}.
+$$
+
+And we define:
+$$\text{MASE} = \text{mean}(|q_{j}|).$$
+
+
+
+Similarly, the root mean squared scaled error is given by
+$$
+\text{RMSSE} = \sqrt{\text{mean}(q_{j}^2)},
+$$
+where 
+$$
+q^2_{j} = \frac{\displaystyle e^2_{j}}
+    {\displaystyle\frac{1}{T-m}\sum_{t=m+1}^T (y_{t}-y_{t-m})^2},
+$$
+with $m = 1$ for non-seasonal data.
+
+### Examples
+
+
+```{r}
+recent_production <- aus_production %>%
+  filter(year(Quarter) >= 1992)
+beer_train <- recent_production %>%
+  filter(year(Quarter) <= 2007)
+
+beer_fit <- beer_train %>%
+  model(
+    Mean = MEAN(Beer),
+    `Naïve` = NAIVE(Beer),
+    `Seasonal naïve` = SNAIVE(Beer),
+    Drift = RW(Beer ~ drift())
+  )
+
+beer_fc <- beer_fit %>%
+  forecast(h = 10)
+
+beer_fc %>%
+  autoplot(
+    aus_production %>% filter(year(Quarter) >= 1992),
+    level = NULL
+  ) +
+  labs(
+    y = "Megalitres",
+    title = "Forecasts for quarterly beer production"
+  ) +
+  guides(colour = guide_legend(title = "Forecast"))
+```
+```{r}
+accuracy(beer_fc, recent_production)
+```
+
+A non-seasonal example:
+
+```{r}
+google_fit <- google_2015 %>%
+  model(
+    Mean = MEAN(Close),
+    `Naïve` = NAIVE(Close),
+    Drift = RW(Close ~ drift())
+  )
+
+google_fc <- google_fit %>%
+  forecast(google_jan_2016)
+google_fc %>%
+  autoplot(bind_rows(google_2015, google_jan_2016),
+    level = NULL) +
+  labs(y = "$US",
+       title = "Google closing stock prices from Jan 2015") +
+  guides(colour = guide_legend(title = "Forecast"))
+```
+
+```{r}
+accuracy(google_fc, google_stock)
+```
+
+## 5.9 Evaluating distributional forecast accuracy
+
+### Quantile scores
+
+```{r}
+google_fc %>%
+  filter(.model == "Naïve") %>%
+  autoplot(bind_rows(google_2015, google_jan_2016), level=80)+
+  labs(y = "$US",
+       title = "Google closing stock prices")
+```
+
+```{r}
+google_fc %>%
+  filter(.model == "Naïve", Date == "2016-01-04") %>%
+  accuracy(google_stock, list(qs=quantile_score), probs=0.10)
+```
+The Winkler score is designed to evaluate prediction intervals:
+$$
+W_{\alpha,t} = \begin{cases}
+  (u_{\alpha,t} - \ell_{\alpha,t}) + \frac{2}{\alpha} (\ell_{\alpha,t} - y_t) & \text{if } y_t < \ell_{\alpha,t} \\
+  (u_{\alpha,t} - \ell_{\alpha,t})   & \text{if }  \ell_{\alpha,t} \le y_t \le u_{\alpha,t} \\
+  (u_{\alpha,t} - \ell_{\alpha,t}) + \frac{2}{\alpha} (y_t - u_{\alpha,t}) & \text{if } y_t > u_{\alpha,t}.
+  \end{cases}
+$$
+For observations that fall within the interval, the Winkler score is simply the length of the interval. So low scores are associated with narrow intervals. However, if the observation falls outside the interval, the penalty applies, with the penalty proportional to how far the observation is outside the interval.
+
+```{r}
+google_fc %>%
+  filter(.model == "Naïve", Date == "2016-01-04") %>%
+  accuracy(google_stock,
+    list(winkler = winkler_score), level = 80)
+
+```
+
+### Continuous Ranked Probability Score
+
+Often we are interested in the whole forecast distribution, rather than particular quantiles or prediction intervals. In that case, we can average the quantile scores over all values of  $p$ to obtain the Continuous Ranked Probability Score or CRPS.
+
+```{r}
+google_fc %>%
+  accuracy(google_stock, list(crps = CRPS))
+
+```
+
+
+### Scale-free comparisons using skill scores
+
+With skill scores, we compute a forecast accuracy measure relative to some benchmark method.
+$$
+\frac{\text{CRPS}_{\text{Naïve}} - \text{CRPS}_{\text{Drift}}}{\text{CRPS}_{\text{Naïve}}}.
+$$
+This gives the proportion that the Drift method improves over the Naïve method based on CRPS.
+```{r}
+google_fc %>%
+  accuracy(google_stock, list(skill = skill_score(CRPS)))
+
+```
+
+The skill_score() function, will always compute the CRPS for the appropriate benchmark forecasts, even if these are not included in the fable object.
+
+## 5.10 Time series cross-validation
+
+```{r}
+# Time series cross-validation accuracy
+google_2015_tr <- google_2015 %>%
+  stretch_tsibble(.init = 3, .step = 1) %>%
+  relocate(Date, Symbol, .id)
+google_2015_tr
+
+```
+
+```{r}
+# TSCV accuracy
+google_2015_tr %>%
+  model(RW(Close ~ drift())) %>%
+  forecast(h = 1) %>%
+  accuracy(google_2015)
+# Training set accuracy
+google_2015 %>%
+  model(RW(Close ~ drift())) %>%
+  accuracy()
+```
+
+### Example: Forecast horizon accuracy with cross-validation
+
+
+```{r}
+google_2015_tr <- google_2015 %>%
+  stretch_tsibble(.init = 3, .step = 1)
+fc <- google_2015_tr %>%
+  model(RW(Close ~ drift())) %>%
+  forecast(h = 8) %>%
+  group_by(.id) %>%
+  mutate(h = row_number()) %>%
+  ungroup()
+fc %>%
+  accuracy(google_2015, by = c("h", ".model")) %>%
+  ggplot(aes(x = h, y = RMSE)) +
+  geom_point()
+```
+
+# Chapter 7 Time series regression models
+
+## 7.1 The linear model
+
+### Simple linear regression
+
+```{r}
+us_change %>%
+  pivot_longer(c(Consumption, Income), names_to="Series") %>%
+  autoplot(value) +
+    labs(y = "% change")
+```
+
+
+
+## 7.2 Least squares estimation
+
+
+### Example: US consumption expenditure
+
+
+```{r}
+fit.consMR <- us_change %>%
+  model(tslm = TSLM(Consumption ~ Income + Production +
+                                    Unemployment + Savings))
+report(fit.consMR)
+
+```
+
+
+## 7.3 Evaluating the regression model
+
+### ACF plot of residuals
+
+### Histogram of residuals
+
+```{r}
+fit.consMR %>% gg_tsresiduals()
+```
+
+```{r}
+augment(fit.consMR) %>%
+  features(.innov, ljung_box, lag = 10, dof = 5)
+```
+
+### Residual plots against predictors
+
+```{r}
+us_change %>%
+  left_join(residuals(fit.consMR), by = "Quarter") %>%
+  pivot_longer(Income:Unemployment,
+               names_to = "regressor", values_to = "x") %>%
+  ggplot(aes(x = x, y = .resid)) +
+  geom_point() +
+  facet_wrap(. ~ regressor, scales = "free_x") +
+  labs(y = "Residuals", x = "")
+```
+
+### Residual plots against fitted values
+
+```{r}
+augment(fit.consMR) %>%
+  ggplot(aes(x = .fitted, y = .resid)) +
+  geom_point() + labs(x = "Fitted", y = "Residuals")
+```
+
+### Outliers and influential observations
+
+### Spurious regression
+
+## 7.4 Some useful predictors
+
+### Trend
+
+### Dummy variables
+
+### Seasonal dummy variables
+
+```{r}
+recent_production <- aus_production %>%
+  filter(year(Quarter) >= 1992)
+recent_production %>%
+  autoplot(Beer) +
+  labs(y = "Megalitres",
+       title = "Australian quarterly beer production")
+```
+```{r}
+fit_beer <- recent_production %>%
+  model(TSLM(Beer ~ trend() + season()))
+report(fit_beer)
+```
+```{r}
+augment(fit_beer) %>%
+  ggplot(aes(x = Quarter)) +
+  geom_line(aes(y = Beer, colour = "Data")) +
+  geom_line(aes(y = .fitted, colour = "Fitted")) +
+  scale_color_manual(
+    values = c(Data = "black", Fitted = "#D55E00")
+  ) +
+  labs(y = "Megalitres",
+       title = "Australian quarterly beer production") +
+  guides(colour = guide_legend(title = "Series"))
+```
+```{r}
+augment(fit_beer) %>%
+  ggplot(aes(x = Beer, y = .fitted,
+             colour = factor(quarter(Quarter)))) +
+  geom_point() +
+  labs(y = "Fitted", x = "Actual values",
+       title = "Australian quarterly beer production") +
+  geom_abline(intercept = 0, slope = 1) +
+  guides(colour = guide_legend(title = "Quarter"))
+```
+
+### Intervention variables
+
+### Trading days
+
+### Distributed lags
+
+### Easter
+
+### Fourier series
+
+```{r}
+fourier_beer <- recent_production %>%
+  model(TSLM(Beer ~ trend() + fourier(K = 2)))
+report(fourier_beer)
+```
+
+## 7.5 Selecting predictors
+
+```{r}
+glance(fit.consMR) %>%
+  select(adj_r_squared, CV, AIC, AICc, BIC)
+
+```
+### Adjusted $R^2$
+
+### Cross-validation
+
+### Akaike’s Information Criterion
+
+### Corrected Akaike’s Information Criterion
+
+### Schwarz’s Bayesian Information Criterion
+
+### Best subset regression
+
+### Stepwise regression
+
+## 7.6 Forecasting with regression
+
+## 7.7 Nonlinear regression
+
+## 7.8 Correlation, causation and forecasting
+
+# Chapter 10 Dynamic regression models
+
+In Chapter 7 we considered regression models of the form
+$$y_t = \beta_0 + \beta_1 x_{1,t} + \dots + \beta_k x_{k,t} + \varepsilon_t,$$
+Now we will allow the errors from a regression to contain autocorrelation. in order to do that we replace $\varepsilon_t$ with $\eta_t$ which is assumed to follow an ARIMA model. 
+\begin{align*}
+  y_t &= \beta_0 + \beta_1 x_{1,t} + \dots + \beta_k x_{k,t} + \eta_t,\\
+      & (1-\phi_1B)(1-B)\eta_t = (1+\theta_1B)\varepsilon_t,
+\end{align*}
+
+# 10.1 Estimation
+
+An important consideration when estimating a **regression with ARMA errors** is that all of the variables in the model must first be stationary. We therefore first difference the non-stationary variables in the model. To maintain the form of the relationship between the response and the predictors we difference all of the variables if any of them need differencing. The resulting model is then called a *model in differences*. It is easy to see that a regression model with ARIMA errors is equivalent to a regression model in differences with ARMA errors. 
+
+## 10.2 Regression with ARIMA errors using fable
+
+The `fable` function `ARIMA()` will fit a regression model with ARIMA errors if exogenous regressors are included in the formula.
+
+```{r}
+us_change %>%
+  pivot_longer(c(Consumption, Income), names_to = "var", values_to = "value") %>%
+  ggplot(aes(x = Quarter, y = value)) +
+  geom_line() +
+  facet_grid(vars(var), scales = "free_y") +
+  labs(title = "US consumption and personal income",
+       y = "Quarterly % change")
+```
+
+```{r}
+fit <- us_change %>%
+  model(ARIMA(Consumption ~ Income))
+report(fit)
+
+```
+
+```{r}
+bind_rows(
+    `Regression residuals` =
+        as_tibble(residuals(fit, type = "regression")),
+    `ARIMA residuals` =
+        as_tibble(residuals(fit, type = "innovation")),
+    .id = "type"
+  ) %>%
+  mutate(
+    type = factor(type, levels=c(
+      "Regression residuals", "ARIMA residuals"))
+  ) %>%
+  ggplot(aes(x = Quarter, y = .resid)) +
+  geom_line() +
+  facet_grid(vars(type))
+```
+There are two types of residual: regression and innovation (the latter are the ARIMA residuals):
+```{r}
+as_tibble(residuals(fit, type="regression")) %>% 
+  head
+```
+```{r}
+as_tibble(residuals(fit, type="innovation")) %>% 
+  head
+```
+
+The innovation residuals are stored in the augmented fit:
+
+```{r}
+augment(fit) %>% 
+  select(.innov)
+```
+
+```{r}
+fit %>% gg_tsresiduals()
+```
+```{r}
+augment(fit) %>%
+  features(.innov, ljung_box, dof = 5, lag = 8)
+```
+

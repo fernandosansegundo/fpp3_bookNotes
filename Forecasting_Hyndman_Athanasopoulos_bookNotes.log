@@ -1,0 +1,1555 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.3.26)  15 APR 2021 15:12
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Forecasting_Hyndman_Athanasopoulos_bookNotes.tex
+(./Forecasting_Hyndman_Athanasopoulos_bookNotes.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/base/article.cl
+s
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.st
+y
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath
+.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+For additional information on amsmath, use the `?' option.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext
+.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.
+sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen139
+))
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.
+sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.
+sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count187
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count188
+\leftroot@=\count189
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count190
+\DOTSCASE@=\count191
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count192
+\c@MaxMatrixCols=\count193
+\dotsspace@=\muskip16
+\c@parentequation=\count194
+\dspbrk@lvl=\count195
+\tag@help=\toks16
+\row@=\count196
+\column@=\count197
+\maxfields@=\count198
+\andhelp@=\toks17
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks18
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex
+.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.s
+ty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluate
+x.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.st
+y
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.s
+ty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.s
+ty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssym
+b.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfon
+ts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.s
+ty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/co
+lor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pd
+ftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperr
+ef.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcm
+ds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pd
+ftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/inf
+warerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval
+.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvs
+etkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/
+kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdf
+escape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor
+.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/letltxmacro/let
+ltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook
+.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvopt
+ions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen148
+\Hy@linkcounter=\count199
+\Hy@pagecounter=\count266
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc
+.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperr
+ef-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intca
+lc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etex
+cmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count267
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.
+def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count268
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen149
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset
+.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bi
+gintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count269
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-l
+tx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count270
+\c@Item=\count271
+\c@Hfootnote=\count272
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdfte
+x.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-
+ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count273
+\c@bookmark@seq@number=\count274
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/
+rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter
+/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip52
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/geometry/geomet
+ry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.
+sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count275
+\Gm@cntv=\count276
+\c@Gm@tempcnt=\count277
+\Gm@bindingoffset=\dimen152
+\Gm@wd@mp=\dimen153
+\Gm@odd@mp=\dimen154
+\Gm@even@mp=\dimen155
+\Gm@layoutwidth=\dimen156
+\Gm@layoutheight=\dimen157
+\Gm@layouthoffset=\dimen158
+\Gm@layoutvoffset=\dimen159
+\Gm@dimlist=\toks23
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyv
+rb.sty
+Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count278
+\FV@InFile=\read2
+\FV@TabBox=\box49
+\c@FancyVerbLine=\count279
+\FV@StepNumber=\count280
+\FV@OutFile=\write3
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/framed/framed.s
+ty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen160
+\fb@frh=\dimen161
+\FrameRule=\dimen162
+\FrameSep=\dimen163
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable
+.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count281
+\LTcapwidth=\dimen164
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@cols=\count282
+\LT@rows=\count283
+\c@LT@tables=\count284
+\c@LT@chunks=\count285
+\LT@p@ftn=\toks24
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/booktabs/bookta
+bs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen165
+\lightrulewidth=\dimen166
+\cmidrulewidth=\dimen167
+\belowrulesep=\dimen168
+\belowbottomsep=\dimen169
+\aboverulesep=\dimen170
+\abovetopsep=\dimen171
+\cmidrulesep=\dimen172
+\cmidrulekern=\dimen173
+\defaultaddspace=\dimen174
+\@cmidla=\count286
+\@cmidlb=\count287
+\@aboverulesep=\dimen175
+\@belowrulesep=\dimen176
+\@thisruleclass=\count288
+\@lastruleclass=\count289
+\@thisrulewidth=\dimen177
+) (/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.st
+y
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count290
+\calc@Bcount=\count291
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count292
+\calc@Cskip=\skip60
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolb
+ox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footno
+te.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box54
+\fn@width=\dimen180
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphi
+cx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphi
+cs.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.s
+ty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/gr
+aphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen181
+\Gin@req@width=\dimen182
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.s
+ty
+Package: babel 2021/03/03 3.55 The Babel package
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.d
+ef
+File: babel.def 2021/03/03 3.55 Babel common definitions
+\babel@savecnt=\count294
+\U@D=\dimen183
+\l@babelnohyphens=\language4
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabe
+l.def)
+\bbl@readstream=\read3
+)
+\bbl@dirlevel=\count295
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/babel-spanish
+/spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+\es@quottoks=\toks25
+\es@quotdepth=\count296
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+)) (/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3bac
+kend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count297
+\l__pdf_internal_box=\box55
+) (./Forecasting_Hyndman_Athanasopoulos_bookNotes.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+)
+\openout1 = `Forecasting_Hyndman_Athanasopoulos_bookNotes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
+LaTeX Font Info:    ... okay on input line 126.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/ep
+stopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/eps
+topdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 126.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/hyperref/namere
+f.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcou
+nt.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/generic/gettitlestrin
+g/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count298
+)
+LaTeX Info: Redefining \ref on input line 126.
+LaTeX Info: Redefining \pageref on input line 126.
+LaTeX Info: Redefining \nameref on input line 126.
+(./Forecasting_Hyndman_Athanasopoulos_bookNotes.out) (./Forecasting_Hyndman_Ath
+anasopoulos_bookNotes.out)
+\@outlinefile=\write4
+\openout4 = `Forecasting_Hyndman_Athanasopoulos_bookNotes.out'.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \. on input line 126.
+LaTeX Info: Redefining \% on input line 126.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+28.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+28.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+128.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+128.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 128.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 128.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 128.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 128
+.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.f
+d
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 128
+.
+
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.f
+d
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./Forecasting_Hyndman_Athanasopoulos_bookNotes.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 3.
+[1
+
+{/Users/fernandosansegundo/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pd
+ftex.map}])
+\tf@toc=\write5
+\openout5 = `Forecasting_Hyndman_Athanasopoulos_bookNotes.toc'.
+
+[2]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+41.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 148.
+
+Package hyperref Warning: Suppressing link with empty target on input line 180.
+
+
+[3] [4] [5] [6] [7] [8] [9] [10]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+754.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+18-1.pdf, id=386, 463.7325pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-18-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-18-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-18-1.pdf  used on input line 758.
+(pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 758--762
+[][]
+ []
+
+[11 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-18-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+19-1.pdf, id=402, 463.7325pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-19-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-19-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-19-1.pdf  used on input line 771.
+(pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
+[12 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-19-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+20-1.pdf, id=416, 463.7325pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-20-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-20-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-20-1.pdf  used on input line 812.
+(pdftex.def)             Requested size: 463.73842pt x 313.174pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 812--814
+[][]
+ []
+
+[13 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-20-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+22-1.pdf, id=429, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-22-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-22-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-22-1.pdf  used on input line 846.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+23-1.pdf, id=430, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-23-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-23-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-23-1.pdf  used on input line 856.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+[14 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-22-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+24-1.pdf, id=442, 453.695pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-24-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-24-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-24-1.pdf  used on input line 865.
+(pdftex.def)             Requested size: 453.6939pt x 313.16922pt.
+[15 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-23-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+25-1.pdf, id=455, 463.7325pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-25-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-25-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-25-1.pdf  used on input line 882.
+(pdftex.def)             Requested size: 463.73842pt x 313.174pt.
+[16 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-24-1.pdf>] [17 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-25-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+27-1.pdf, id=481, 457.71pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-27-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-27-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-27-1.pdf  used on input line 923.
+(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+28-1.pdf, id=482, 457.71pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-28-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-28-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-28-1.pdf  used on input line 937.
+(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
+[18 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-27-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+29-1.pdf, id=494, 457.71pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-29-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-29-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-29-1.pdf  used on input line 947.
+(pdftex.def)             Requested size: 457.72285pt x 313.17877pt.
+[19 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-28-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+30-1.pdf, id=507, 463.7325pt x 638.385pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-30-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-30-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-30-1.pdf  used on input line 958.
+(pdftex.def)             Requested size: 463.73135pt x 638.38342pt.
+[20 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-29-1.pdf>] [21 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-30-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+31-1.pdf, id=531, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-31-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-31-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-31-1.pdf  used on input line 972.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+32-1.pdf, id=532, 463.7325pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-32-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-32-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-32-1.pdf  used on input line 999.
+(pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
+[22 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-31-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+33-1.pdf, id=545, 463.7325pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-33-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-33-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-33-1.pdf  used on input line 1012.
+(pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
+[23 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-32-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+34-1.pdf, id=557, 463.7325pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-34-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-34-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-34-1.pdf  used on input line 1034.
+(pdftex.def)             Requested size: 463.73842pt x 313.174pt.
+[24 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-33-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+35-1.pdf, id=573, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-35-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-35-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-35-1.pdf  used on input line 1050.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+[25 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-34-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+36-1.pdf, id=586, 401.5pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-36-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-36-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-36-1.pdf  used on input line 1065.
+(pdftex.def)             Requested size: 401.5235pt x 316.19975pt.
+[26 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-35-1.pdf>] [27 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-36-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+38-1.pdf, id=612, 459.7175pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-38-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-38-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-38-1.pdf  used on input line 1111.
+(pdftex.def)             Requested size: 459.74442pt x 316.19975pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+39-1.pdf, id=613, 459.7175pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-39-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-39-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-39-1.pdf  used on input line 1126.
+(pdftex.def)             Requested size: 459.74442pt x 316.19975pt.
+[28 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-38-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+40-1.pdf, id=626, 446.66875pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-40-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-40-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-40-1.pdf  used on input line 1141.
+(pdftex.def)             Requested size: 446.67445pt x 316.18529pt.
+[29 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-39-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+41-1.pdf, id=639, 459.7175pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-41-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-41-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-41-1.pdf  used on input line 1151.
+(pdftex.def)             Requested size: 459.74442pt x 316.19975pt.
+[30 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-40-1.pdf>] [31 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-41-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+42-1.pdf, id=669, 460.72125pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-42-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-42-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-42-1.pdf  used on input line 1212.
+(pdftex.def)             Requested size: 460.72012pt x 316.18047pt.
+[32 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-42-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+43-1.pdf, id=683, 460.72125pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-43-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-43-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-43-1.pdf  used on input line 1245.
+(pdftex.def)             Requested size: 460.72012pt x 313.16922pt.
+[33 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-43-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+44-1.pdf, id=697, 446.66875pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-44-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-44-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-44-1.pdf  used on input line 1269.
+(pdftex.def)             Requested size: 446.67445pt x 316.18529pt.
+[34 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-44-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+45-1.pdf, id=712, 466.74374pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-45-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-45-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-45-1.pdf  used on input line 1301.
+(pdftex.def)             Requested size: 466.76396pt x 316.19493pt.
+[35 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-45-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+47-1.pdf, id=725, 466.74374pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-47-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-47-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-47-1.pdf  used on input line 1346.
+(pdftex.def)             Requested size: 466.76396pt x 316.19493pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+48-1.pdf, id=726, 458.71375pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-48-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-48-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-48-1.pdf  used on input line 1356.
+(pdftex.def)             Requested size: 458.72662pt x 313.17877pt.
+[36 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-47-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+49-1.pdf, id=739, 466.74374pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-49-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-49-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-49-1.pdf  used on input line 1372.
+(pdftex.def)             Requested size: 466.76396pt x 316.19493pt.
+[37 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-48-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+50-1.pdf, id=753, 463.7325pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-50-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-50-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-50-1.pdf  used on input line 1394.
+(pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
+[38 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-49-1.pdf>] [39 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-50-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+52-1.pdf, id=783, 463.7325pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-52-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-52-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-52-1.pdf  used on input line 1452.
+(pdftex.def)             Requested size: 463.73842pt x 316.18529pt.
+[40 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-52-1.pdf>]
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1480.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+480.
+(/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1480.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1484.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 1484.
+
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+54-1.pdf, id=797, 466.74374pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-54-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-54-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-54-1.pdf  used on input line 1513.
+(pdftex.def)             Requested size: 466.76396pt x 316.19493pt.
+[41] [42 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unn
+amed-chunk-54-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+55-1.pdf, id=822, 458.71375pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-55-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-55-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-55-1.pdf  used on input line 1572.
+(pdftex.def)             Requested size: 458.72662pt x 313.17877pt.
+[43 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-55-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+56-1.pdf, id=837, 458.71375pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-56-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-56-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-56-1.pdf  used on input line 1644.
+(pdftex.def)             Requested size: 458.72662pt x 313.17877pt.
+[44 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-56-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+57-1.pdf, id=854, 457.71pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-57-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-57-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-57-1.pdf  used on input line 1663.
+(pdftex.def)             Requested size: 457.72285pt x 313.17877pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+58-1.pdf, id=855, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-58-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-58-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-58-1.pdf  used on input line 1672.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+[45 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-57-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+59-1.pdf, id=867, 458.71375pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-59-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-59-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-59-1.pdf  used on input line 1691.
+(pdftex.def)             Requested size: 458.72662pt x 313.17877pt.
+[46 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-58-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+60-1.pdf, id=882, 458.71375pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-60-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-60-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-60-1.pdf  used on input line 1735.
+(pdftex.def)             Requested size: 458.72662pt x 313.17877pt.
+[47 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-59-1.pdf>] [48 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-60-1.pdf>] [49]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+65-1.pdf, id=921, 453.695pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-65-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-65-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-65-1.pdf  used on input line 1915.
+(pdftex.def)             Requested size: 453.6939pt x 315.17673pt.
+[50]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+66-1.pdf, id=927, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-66-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-66-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-66-1.pdf  used on input line 1931.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1931--1933
+[][]
+ []
+
+[51 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-65-1.pdf>] [52 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-66-1.pdf>] [53]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+68-1.pdf, id=956, 459.7175pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-68-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-68-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-68-1.pdf  used on input line 2069.
+(pdftex.def)             Requested size: 459.74442pt x 315.19595pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+69-1.pdf, id=957, 397.485pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-69-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-69-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-69-1.pdf  used on input line 2085.
+(pdftex.def)             Requested size: 397.49614pt x 313.17877pt.
+[54 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-68-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+71-1.pdf, id=969, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-71-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-71-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-71-1.pdf  used on input line 2121.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+[55 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-69-1.pdf>] [56 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-71-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+73-1.pdf, id=998, 454.69875pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-73-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-73-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-73-1.pdf  used on input line 2174.
+(pdftex.def)             Requested size: 454.70456pt x 315.18153pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+74-1.pdf, id=999, 460.72125pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-74-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-74-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-74-1.pdf  used on input line 2191.
+(pdftex.def)             Requested size: 460.72012pt x 316.18047pt.
+[57 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-73-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+75-1.pdf, id=1014, 460.72125pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-75-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-75-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-75-1.pdf  used on input line 2208.
+(pdftex.def)             Requested size: 460.72012pt x 316.18047pt.
+[58 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-74-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+76-1.pdf, id=1026, 463.7325pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-76-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-76-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-76-1.pdf  used on input line 2227.
+(pdftex.def)             Requested size: 463.73842pt x 313.174pt.
+[59 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-75-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+77-1.pdf, id=1038, 459.7175pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-77-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-77-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-77-1.pdf  used on input line 2238.
+(pdftex.def)             Requested size: 459.74442pt x 316.19975pt.
+[60 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-76-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+78-1.pdf, id=1050, 464.73625pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-78-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-78-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-78-1.pdf  used on input line 2260.
+(pdftex.def)             Requested size: 464.74928pt x 316.19011pt.
+[61 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-77-1.pdf>] [62 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-78-1.pdf>]pdfTeX warning (ext4): destination with the sa
+me identifier (name{equation.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2335 \begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2335 \begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2335 \begin{equation}
+                       pdfTeX warning (ext4): destination with the same identif
+ier (name{equation.0.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2335 \begin{equation}
+                        [63]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+84-1.pdf, id=1092, 454.69875pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-84-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-84-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-84-1.pdf  used on input line 2383.
+(pdftex.def)             Requested size: 454.70456pt x 315.18153pt.
+[64 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-84-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+86-1.pdf, id=1106, 460.72125pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-86-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-86-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-86-1.pdf  used on input line 2428.
+(pdftex.def)             Requested size: 460.72012pt x 315.17673pt.
+[65 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-86-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+88-1.pdf, id=1118, 454.69875pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-88-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-88-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-88-1.pdf  used on input line 2462.
+(pdftex.def)             Requested size: 454.70456pt x 315.18153pt.
+[66 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-88-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+90-1.pdf, id=1130, 457.71pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-90-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-90-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-90-1.pdf  used on input line 2520.
+(pdftex.def)             Requested size: 457.72984pt x 315.19115pt.
+[67 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-90-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+91-1.pdf, id=1150, 457.71pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-91-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-91-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-91-1.pdf  used on input line 2558.
+(pdftex.def)             Requested size: 457.72285pt x 313.17877pt.
+[68]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+92-1.pdf, id=1157, 457.71pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-92-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-92-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-92-1.pdf  used on input line 2577.
+(pdftex.def)             Requested size: 457.72285pt x 313.17877pt.
+[69 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-91-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+93-1.pdf, id=1169, 462.72874pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-93-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-93-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-93-1.pdf  used on input line 2597.
+(pdftex.def)             Requested size: 462.73466pt x 316.18529pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2597--2601
+[][]
+ []
+
+[70 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-92-1.pdf>] [71 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-93-1.pdf>] [72] [73]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+96-1.pdf, id=1212, 453.695pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-96-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-96-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-96-1.pdf  used on input line 2798.
+(pdftex.def)             Requested size: 453.6939pt x 313.16922pt.
+[74]
+Overfull \vbox (1.07262pt too high) detected at line 2836
+ []
+
+[75 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-96-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+98-1.pdf, id=1230, 454.69875pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-98-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-98-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-98-1.pdf  used on input line 2838.
+(pdftex.def)             Requested size: 454.70456pt x 315.18153pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+100-1.pdf, id=1231, 454.69875pt x 315.1775pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-100-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-100-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-100-1.pdf  used on input line 2872.
+(pdftex.def)             Requested size: 454.70456pt x 315.18153pt.
+[76 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-98-1.pdf>] [77 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figu
+re-latex/unnamed-chunk-100-1.pdf>] [78]
+Overfull \hbox (70.99341pt too wide) in paragraph at lines 3017--3017
+[]\T1/lmtt/m/n/10 ## Warning: The future dataset is incomplete, incomplete out-
+of-sample data will be treated as missing.[] 
+ []
+
+[79]
+Overfull \hbox (70.99341pt too wide) in paragraph at lines 3066--3066
+[]\T1/lmtt/m/n/10 ## Warning: The future dataset is incomplete, incomplete out-
+of-sample data will be treated as missing.[] 
+ []
+
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+107-1.pdf, id=1275, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-107-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-107-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-107-1.pdf  used on input line 3068.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+108-1.pdf, id=1276, 457.71pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-108-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-108-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-108-1.pdf  used on input line 3090.
+(pdftex.def)             Requested size: 457.72984pt x 316.19493pt.
+[80 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-107-1.pdf>] [81 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-108-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+110-1.pdf, id=1306, 461.725pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-110-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-110-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-110-1.pdf  used on input line 3148.
+(pdftex.def)             Requested size: 461.72388pt x 316.18047pt.
+[82 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-110-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+112-1.pdf, id=1324, 464.73625pt x 300.12125pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-112-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-112-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-112-1.pdf  used on input line 3181.
+(pdftex.def)             Requested size: 464.74928pt x 300.12967pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+113-1.pdf, id=1325, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-113-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-113-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-113-1.pdf  used on input line 3195.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+[83 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-112-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+114-1.pdf, id=1340, 459.7175pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-114-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-114-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-114-1.pdf  used on input line 3228.
+(pdftex.def)             Requested size: 459.74442pt x 316.19975pt.
+[84 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-113-1.pdf>] [85 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-114-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+116-1.pdf, id=1375, 453.695pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-116-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-116-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-116-1.pdf  used on input line 3276.
+(pdftex.def)             Requested size: 453.6939pt x 313.16922pt.
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+117-1.pdf, id=1376, 453.695pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-117-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-117-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-117-1.pdf  used on input line 3291.
+(pdftex.def)             Requested size: 453.6939pt x 316.18047pt.
+[86 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-116-1.pdf>] [87 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-117-1.pdf>] [88]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+120-1.pdf, id=1434, 463.7325pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-120-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-120-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-120-1.pdf  used on input line 3437.
+(pdftex.def)             Requested size: 463.73842pt x 313.174pt.
+[89 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-120-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+122-1.pdf, id=1447, 459.7175pt x 313.17pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-122-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-122-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-122-1.pdf  used on input line 3479.
+(pdftex.def)             Requested size: 459.7304pt x 313.17877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3479--3482
+[][]
+ []
+
+[90 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-
+chunk-122-1.pdf>]
+<Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-chunk-
+126-1.pdf, id=1459, 461.725pt x 316.18124pt>
+File: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-c
+hunk-126-1.pdf Graphic file (type pdf)
+<use Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unnamed-ch
+unk-126-1.pdf>
+Package pdftex.def Info: Forecasting_Hyndman_Athanasopoulos_bookNotes_files/fig
+ure-latex/unnamed-chunk-126-1.pdf  used on input line 3553.
+(pdftex.def)             Requested size: 461.72388pt x 316.18047pt.
+[91] [92 <./Forecasting_Hyndman_Athanasopoulos_bookNotes_files/figure-latex/unn
+amed-chunk-126-1.pdf>] (./Forecasting_Hyndman_Athanasopoulos_bookNotes.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+)
+Package rerunfilecheck Info: File `Forecasting_Hyndman_Athanasopoulos_bookNotes
+.out' has not changed.
+(rerunfilecheck)             Checksum: 8A841268F0A499675260730AD2B8EE91;12037.
+ ) 
+Here is how much of TeX's memory you used:
+ 13174 strings out of 480944
+ 222365 string characters out of 5904777
+ 532650 words of memory out of 5000000
+ 29732 multiletter control sequences out of 15000+600000
+ 482168 words of font info for 91 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 71i,11n,74p,436b,647s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-e
+c.enc}{/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/
+lm-mathex.enc}{/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/enc/d
+vips/lm/lm-ts1.enc}{/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/
+enc/dvips/lm/lm-mathsy.enc}{/Users/fernandosansegundo/Library/TinyTeX/texmf-dis
+t/fonts/enc/dvips/lm/lm-rm.enc}{/Users/fernandosansegundo/Library/TinyTeX/texmf
+-dist/fonts/enc/dvips/lm/lm-mathit.enc}</Users/fernandosansegundo/Library/TinyT
+eX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/fernandosansegundo/Libra
+ry/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/fernandosansegun
+do/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/fernando
+sansegundo/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/
+fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><
+/Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr1
+0.pfb></Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/type1/public/
+lm/lmr12.pfb></Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts/type1/
+public/lm/lmr17.pfb></Users/fernandosansegundo/Library/TinyTeX/texmf-dist/fonts
+/type1/public/lm/lmr7.pfb></Users/fernandosansegundo/Library/TinyTeX/texmf-dist
+/fonts/type1/public/lm/lmri10.pfb></Users/fernandosansegundo/Library/TinyTeX/te
+xmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/fernandosansegundo/Library/Ti
+nyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/fernandosansegundo/Lib
+rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></Users/fernandosanseg
+undo/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/fernan
+dosansegundo/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on Forecasting_Hyndman_Athanasopoulos_bookNotes.pdf (92 pages, 3
+183501 bytes).
+PDF statistics:
+ 1615 PDF objects out of 1728 (max. 8388607)
+ 1285 compressed objects within 13 object streams
+ 366 named destinations out of 1000 (max. 500000)
+ 810 words of extra memory for PDF output out of 10000 (max. 10000000)
+
